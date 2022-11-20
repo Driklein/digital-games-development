@@ -15,6 +15,8 @@ public class Soldier : MonoBehaviour
     private int actionLimiter;
     public Animator animator;
 
+    [SerializeField] private AudioSource jumpSoundEffect;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,8 +28,6 @@ public class Soldier : MonoBehaviour
         animator = GetComponent<Animator>();
         moveSpeed = 5;
         jumpLimiter = 0;
-        actionLimiter = 0;
-        canAct = true;
         onGround = true;
     }
 
@@ -41,23 +41,8 @@ public class Soldier : MonoBehaviour
             animator.SetBool("isWalking",false);
         
 
-        if(Input.GetKey("i") && canAct==true){
-            actionLimiter = 40;
-            canAct = false;
-            animator.SetBool("isAttacking",true);
-        }
-        else
-            animator.SetBool("isAttacking",false);
-        
-
-        if(Input.GetKey("o") && canAct==true){
-            animator.SetBool("isBlocking",true);
-        }
-        else
-            animator.SetBool("isBlocking",false);
-        
-
-        if(Input.GetKeyDown("space") && onGround==true){
+        if(Input.GetKeyDown(KeyCode.UpArrow) && onGround==true){
+            jumpSoundEffect.Play();
             jumpLimiter = 90;
             move.velocity = Vector2.up * 10;
         }
@@ -70,12 +55,6 @@ public class Soldier : MonoBehaviour
         else
             onGround = true;
 
-        if(actionLimiter>0){
-            actionLimiter--;
-            canAct=false;
-        }
-        else
-            canAct= true;
 
         direction = Input.GetAxis("Horizontal");  
         move.velocity = new Vector2(direction * moveSpeed, move.velocity.y);
