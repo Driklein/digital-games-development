@@ -1,2 +1,1 @@
-# digital-games-development
-# digital-games-development
+# Projeto na disciplina de Laboratório de Desenvolvimento de Jogos Digitais
