@@ -14,8 +14,21 @@ public class Soldier : MonoBehaviour
     private bool canAct;
     private int actionLimiter;
     public Animator animator;
+    public int health;
+    private int deathTime;
+
 
     [SerializeField] private AudioSource jumpSoundEffect;
+    [SerializeField] private AudioSource deathSoundEffect;
+
+
+    public void TakeDamage(int damage){
+       
+        health -= damage;
+        Debug.Log("Player Damage taken");
+
+
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -29,19 +42,31 @@ public class Soldier : MonoBehaviour
         moveSpeed = 5;
         jumpLimiter = 0;
         onGround = true;
+        health = 100;
+        deathTime=200;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetAxis("Horizontal")!=0){
+        if(health <= 0){
+            animator.SetBool("isDying",true);
+            if(deathTime==100)
+                deathSoundEffect.Play();
+            if(deathTime==0)
+                Destroy(gameObject);
+            deathTime--;
+        }
+
+        if(Input.GetAxis("Horizontal")!=0 && health>0){
             animator.SetBool("isWalking",true);
         }
         else
             animator.SetBool("isWalking",false);
         
 
-        if(Input.GetKeyDown(KeyCode.UpArrow) && onGround==true){
+        if(Input.GetKeyDown(KeyCode.UpArrow) && onGround==true && health>0){
             jumpSoundEffect.Play();
             jumpLimiter = 90;
             move.velocity = Vector2.up * 10;
@@ -56,8 +81,9 @@ public class Soldier : MonoBehaviour
             onGround = true;
 
 
-        direction = Input.GetAxis("Horizontal");  
-        move.velocity = new Vector2(direction * moveSpeed, move.velocity.y);
+        direction = Input.GetAxis("Horizontal");
+        if(health>0)  
+            move.velocity = new Vector2(direction * moveSpeed, move.velocity.y);
 
         if(direction > 0){
             transform.localScale = facingRight;

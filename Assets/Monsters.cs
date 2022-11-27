@@ -14,9 +14,21 @@ public class Monsters : MonoBehaviour
     private bool isMoving;
     private int x_controller;
 
+    public int health;
+
+
+    public void TakeDamage(int damage){
+       
+        health -= damage;
+        Debug.Log("Monster Damage taken");
+
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
+        health = 100;
         facingRight = transform.localScale;
         facingLeft = transform.localScale;
         facingLeft.x = facingLeft.x * (-1);
@@ -32,6 +44,9 @@ public class Monsters : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(health <= 0){
+            Destroy(gameObject);
+        }
         
 
         if(moveSpeed !=0){
@@ -78,4 +93,6 @@ public class Monsters : MonoBehaviour
         if(isMoving==true && moveSpeed!=0)
             move.velocity = new Vector2(direction * moveSpeed, move.velocity.y);
     }
+
+    
 }
