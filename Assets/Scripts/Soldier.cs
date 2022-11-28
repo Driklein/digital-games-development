@@ -16,10 +16,12 @@ public class Soldier : MonoBehaviour
     public Animator animator;
     public int health;
     private int deathTime;
+    private int endScreenTime;
 
 
     [SerializeField] private AudioSource jumpSoundEffect;
     [SerializeField] private AudioSource deathSoundEffect;
+
 
 
     public void TakeDamage(int damage){
@@ -27,6 +29,15 @@ public class Soldier : MonoBehaviour
         health -= damage;
         Debug.Log("Player Damage taken");
 
+
+    }
+
+    public void HorseFound(){
+        Debug.Log("Horse Found");
+        if(endScreenTime==0)
+            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
+        else
+            endScreenTime--;
 
     }
 
@@ -44,6 +55,7 @@ public class Soldier : MonoBehaviour
         onGround = true;
         health = 100;
         deathTime=200;
+        endScreenTime= 300;
 
     }
 
