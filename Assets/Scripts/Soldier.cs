@@ -18,6 +18,11 @@ public class Soldier : MonoBehaviour
     private int deathTime;
     private int endScreenTime;
 
+    private float startPos;
+    private float finalPos;
+
+    private int counter;
+
 
     [SerializeField] private AudioSource jumpSoundEffect;
     [SerializeField] private AudioSource deathSoundEffect;
@@ -56,6 +61,7 @@ public class Soldier : MonoBehaviour
         health = 100;
         deathTime=200;
         endScreenTime= 300;
+        counter = 0;
 
     }
 
@@ -66,8 +72,9 @@ public class Soldier : MonoBehaviour
             animator.SetBool("isDying",true);
             if(deathTime==100)
                 deathSoundEffect.Play();
+                
             if(deathTime==0)
-                Destroy(gameObject);
+                //Destroy(gameObject);
             deathTime--;
         }
 
@@ -84,18 +91,36 @@ public class Soldier : MonoBehaviour
             move.velocity = Vector2.up * 10;
         }
 
-
+        
         if(jumpLimiter>0){
             jumpLimiter--;
             onGround=false;
         }
         else
             onGround = true;
+        /*
 
+        startPos = Soldier.y;
+
+        if(counter<50)
+            counter++;
+        else{
+            finalPos = Soldier.y;
+            counter=0;
+        }
+        if(startPos == finalPos)
+            onGround=true;
+        else    
+            onGround=false;
+        */
 
         direction = Input.GetAxis("Horizontal");
+
         if(health>0)  
             move.velocity = new Vector2(direction * moveSpeed, move.velocity.y);
+
+        if(health==0)
+            moveSpeed=0;
 
         if(direction > 0){
             transform.localScale = facingRight;

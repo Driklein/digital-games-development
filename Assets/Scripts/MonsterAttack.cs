@@ -13,24 +13,25 @@ public class MonsterAttack : MonoBehaviour
     public Animator monsterAnim;
     public int damage;
 
-    //[SerializeField] private AudioSource attackSoundEffect;
+    [SerializeField] private AudioSource attackSoundEffect;
 
     // Update is called once per frame
     void Update()
     {
-        if(timeBtwAttack <= 0 ){
+        if(timeBtwAttack <= 0){
             timeBtwAttack = startTimeBtwAttack;
 
             monsterAnim.SetTrigger("isAttacking");
             //attackSoundEffect.Play();
 
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
-                for(int i=0; i<enemiesToDamage.Length; i++){
+            for(int i=0; i<enemiesToDamage.Length; i++){
+                //if(GetComponent<PlayerAttack>().isBlocking==false;
                     enemiesToDamage[i].GetComponent<Soldier>().TakeDamage(damage);
-                }
-                timeBtwAttack = startTimeBtwAttack;
+            }
+            timeBtwAttack = startTimeBtwAttack;
+
             
-    
         }
         else{
             timeBtwAttack -= Time.deltaTime;
@@ -39,7 +40,8 @@ public class MonsterAttack : MonoBehaviour
     }
 
     void OnDrawGizmosSelected(){
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPos.position, attackRange);
+        Gizmos.color=Color.red;   
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);     
     }
+
 }

@@ -1213,6 +1213,7 @@ MonoBehaviour:
     m_Bits: 128
   monsterAnim: {fileID: 108056623}
   damage: 20
+  attackSoundEffect: {fileID: 0}
 --- !u!1 &128363427
 GameObject:
   m_ObjectHideFlags: 0
@@ -1941,6 +1942,7 @@ MonoBehaviour:
     m_Bits: 128
   monsterAnim: {fileID: 171481104}
   damage: 20
+  attackSoundEffect: {fileID: 0}
 --- !u!1 &181414184
 GameObject:
   m_ObjectHideFlags: 0
@@ -5349,6 +5351,7 @@ MonoBehaviour:
     m_Bits: 128
   monsterAnim: {fileID: 630982323}
   damage: 20
+  attackSoundEffect: {fileID: 0}
 --- !u!95 &630982323 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7023199007760294188, guid: 38d1b8d56cd9d64438e48e07a5870cab, type: 3}
@@ -6996,6 +6999,7 @@ MonoBehaviour:
     m_Bits: 128
   monsterAnim: {fileID: 783642207}
   damage: 20
+  attackSoundEffect: {fileID: 0}
 --- !u!1 &785982420
 GameObject:
   m_ObjectHideFlags: 0
@@ -7179,6 +7183,7 @@ MonoBehaviour:
     m_Bits: 128
   monsterAnim: {fileID: 799137373}
   damage: 20
+  attackSoundEffect: {fileID: 0}
 --- !u!1 &799823283
 GameObject:
   m_ObjectHideFlags: 0
@@ -9064,6 +9069,7 @@ MonoBehaviour:
     m_Bits: 128
   monsterAnim: {fileID: 947302171}
   damage: 20
+  attackSoundEffect: {fileID: 0}
 --- !u!1 &960123359
 GameObject:
   m_ObjectHideFlags: 0
@@ -10976,6 +10982,7 @@ MonoBehaviour:
     m_Bits: 128
   monsterAnim: {fileID: 1094027381}
   damage: 20
+  attackSoundEffect: {fileID: 0}
 --- !u!1 &1106224567
 GameObject:
   m_ObjectHideFlags: 0
@@ -12454,6 +12461,7 @@ MonoBehaviour:
     m_Bits: 128
   monsterAnim: {fileID: 1273106581}
   damage: 40
+  attackSoundEffect: {fileID: 0}
 --- !u!1 &1276401532
 GameObject:
   m_ObjectHideFlags: 0
@@ -20014,6 +20022,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   playerAnim: {fileID: 2039093138}
+  isBlocking: 0
   damage: 20
   attackSoundEffect: {fileID: 2039093143}
   blockSoundEffect: {fileID: 2039093142}
