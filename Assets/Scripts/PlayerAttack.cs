@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class PlayerAttack : MonoBehaviour
 {
-    private float timeBtwAttack;
-    public float startTimeBtwAttack;
 
     public Transform attackPos;
     public float attackRange;
     public LayerMask whatIsEnemies;
+
     public Animator playerAnim;
     public bool isBlocking;
     public int damage;
@@ -17,12 +16,13 @@ public class PlayerAttack : MonoBehaviour
     [SerializeField] private AudioSource attackSoundEffect;
     [SerializeField] private AudioSource blockSoundEffect;
 
-    // Update is called once per frame
+    private float timeBtwAttack;
+    public float startTimeBtwAttack;
+
 
     void Update()
     {
-        if(timeBtwAttack <= 0 ){
-            timeBtwAttack = startTimeBtwAttack;
+        if(timeBtwAttack <= 0){
 
             if(Input.GetKey(KeyCode.K)){
 
@@ -30,18 +30,19 @@ public class PlayerAttack : MonoBehaviour
                 attackSoundEffect.Play();
 
                 Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+
                 for(int i=0; i<enemiesToDamage.Length; i++){
                     enemiesToDamage[i].GetComponent<Monsters>().TakeDamage(damage);
                 }
-                timeBtwAttack = startTimeBtwAttack;
-                
             }
-        }
 
+            timeBtwAttack = startTimeBtwAttack;
 
-        else{
+        }else{
             timeBtwAttack -= Time.deltaTime;
         }
+    
+
         if(Input.GetKeyDown(KeyCode.J)){
             playerAnim.SetBool("isBlocking",true);
             blockSoundEffect.Play();

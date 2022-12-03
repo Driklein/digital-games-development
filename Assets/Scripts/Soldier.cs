@@ -9,30 +9,33 @@ public class Soldier : MonoBehaviour
     public float direction;
     private Vector3 facingRight;
     private Vector3 facingLeft;
-    private bool onGround;
-    private int jumpLimiter;
-    private bool canAct;
-    private int actionLimiter;
     public Animator animator;
     public int health;
     private int deathTime;
     private int endScreenTime;
 
-    private float startPos;
-    private float finalPos;
+    private bool isJumping;
+
+    public float startPos;
+    public float finalPos;
 
     private int counter;
-
 
     [SerializeField] private AudioSource jumpSoundEffect;
     [SerializeField] private AudioSource deathSoundEffect;
 
+    public void LifePotion(){
+
+        health=100;
+        Debug.Log("Life potion taken");
+
+    }
 
 
     public void TakeDamage(int damage){
        
         health -= damage;
-        Debug.Log("Player Damage taken");
+        Debug.Log("Soldier Life: "+ health);
 
 
     }
@@ -56,8 +59,9 @@ public class Soldier : MonoBehaviour
         move = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         moveSpeed = 5;
-        jumpLimiter = 0;
-        onGround = true;
+
+        isJumping=false;
+
         health = 100;
         deathTime=200;
         endScreenTime= 300;
@@ -85,34 +89,11 @@ public class Soldier : MonoBehaviour
             animator.SetBool("isWalking",false);
         
 
-        if(Input.GetKeyDown(KeyCode.UpArrow) && onGround==true && health>0){
+        if(Input.GetKeyDown(KeyCode.UpArrow) && !isJumping && health>0){
             jumpSoundEffect.Play();
-            jumpLimiter = 90;
             move.velocity = Vector2.up * 10;
+            isJumping=true;
         }
-
-        
-        if(jumpLimiter>0){
-            jumpLimiter--;
-            onGround=false;
-        }
-        else
-            onGround = true;
-        /*
-
-        startPos = Soldier.y;
-
-        if(counter<50)
-            counter++;
-        else{
-            finalPos = Soldier.y;
-            counter=0;
-        }
-        if(startPos == finalPos)
-            onGround=true;
-        else    
-            onGround=false;
-        */
 
         direction = Input.GetAxis("Horizontal");
 
@@ -127,6 +108,12 @@ public class Soldier : MonoBehaviour
         }
         if(direction < 0){
             transform.localScale = facingLeft;
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D other){
+        if(other.gameObject.CompareTag("Ground")){
+            isJumping=false;
         }
     }
 }
