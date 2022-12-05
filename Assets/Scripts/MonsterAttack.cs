@@ -18,6 +18,7 @@ public class MonsterAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         if(timeBtwAttack <= 0){
             timeBtwAttack = startTimeBtwAttack;
 
@@ -26,8 +27,9 @@ public class MonsterAttack : MonoBehaviour
 
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
             for(int i=0; i<enemiesToDamage.Length; i++){
-                //if(GetComponent<PlayerAttack>().isBlocking==false;
-                    enemiesToDamage[i].GetComponent<Soldier>().TakeDamage(damage);
+                if(enemiesToDamage[i].GetComponent<PlayerAttack>().returnBlock()==true)
+                    break;
+                enemiesToDamage[i].GetComponent<Soldier>().TakeDamage(damage);
             }
             timeBtwAttack = startTimeBtwAttack;
 

@@ -11,6 +11,7 @@ public class PlayerAttack : MonoBehaviour
 
     public Animator playerAnim;
     public bool isBlocking;
+
     public int damage;
 
     [SerializeField] private AudioSource attackSoundEffect;
@@ -18,6 +19,10 @@ public class PlayerAttack : MonoBehaviour
 
     private float timeBtwAttack;
     public float startTimeBtwAttack;
+
+    public bool returnBlock(){
+        return isBlocking;
+    }
 
 
     void Update()
@@ -34,7 +39,9 @@ public class PlayerAttack : MonoBehaviour
                 for(int i=0; i<enemiesToDamage.Length; i++){
                     enemiesToDamage[i].GetComponent<Monsters>().TakeDamage(damage);
                 }
+                
             }
+            
 
             timeBtwAttack = startTimeBtwAttack;
 

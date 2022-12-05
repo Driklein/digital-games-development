@@ -15,19 +15,22 @@ public class Soldier : MonoBehaviour
     private int endScreenTime;
 
     private bool isJumping;
-
-    public float startPos;
-    public float finalPos;
+    private bool isWalking;
 
     private int counter;
 
     [SerializeField] private AudioSource jumpSoundEffect;
     [SerializeField] private AudioSource deathSoundEffect;
+    //[SerializeField] private AudioSource hurtSoundEffect;
+    //[SerializeField] private AudioSource stepsSoundEffect;
+    //[SerializeField] private AudioSource horseFoundSoundEffect;
+    [SerializeField] private AudioSource potionSoundEffect;
 
     public void LifePotion(){
 
         health=100;
         Debug.Log("Life potion taken");
+        potionSoundEffect.Play();
 
     }
 
@@ -42,6 +45,7 @@ public class Soldier : MonoBehaviour
 
     public void HorseFound(){
         Debug.Log("Horse Found");
+        //horseFoundSoundEffect.Play();
         if(endScreenTime==0)
             UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
         else

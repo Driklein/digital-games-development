@@ -8,6 +8,8 @@ public class Potion : MonoBehaviour
     public float attackRange;
     public LayerMask whatIsEnemies;
 
+    [SerializeField] private AudioSource SoundEffect;
+
     // Update is called once per frame
     void Update()
     {
