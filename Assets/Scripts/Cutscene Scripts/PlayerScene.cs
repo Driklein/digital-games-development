@@ -73,29 +73,29 @@ public class PlayerScene : MonoBehaviour
         if(i>800 && i<1000){
             D3.SetActive(true);   // Monstros?
         }
-        if(i>1000 && i<1100){
+        if(i>1000 && i<1100){ //caminhando para os Monstros
             //moveSpeed=5;
             D3.SetActive(false);
             direction = 1;
         }
-        if(i>1100 && i<1200){
+        if(i>1100 && i<1200){ 
             direction=0;
             if(i%30==0)
                 animator.SetTrigger("isAttacking");
         }
-        if(i>1200 && i<1800){
+        if(i>1200 && i<1500){
             animator.SetBool("isDying",true);
         }
-        if(i>1800 && i<2000){
+        if(i>1700 && i<1900){
             animator.SetBool("isDying",false);
             D4.SetActive(true);
         }
-        if(i>2000){
+        if(i>1900){
             direction = 1;
             D4.SetActive(false);
         }
 
-        if(i==2500)
+        if(i==2250)
             UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
 
         i++;

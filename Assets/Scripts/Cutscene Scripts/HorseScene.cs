@@ -12,11 +12,8 @@ public class HorseScene : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        speed = 0.05f;
-        i=0;
-        
-        
+        speed = 0.04f;
+        i=0;   
     }
 
     // Update is called once per frame

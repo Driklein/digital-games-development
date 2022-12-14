@@ -6,14 +6,14 @@ public class MonsterAttack : MonoBehaviour
 {
     private float timeBtwAttack;
     public float startTimeBtwAttack;
-
     public Transform attackPos;
     public float attackRange;
+
     public LayerMask whatIsEnemies;
     public Animator monsterAnim;
     public int damage;
 
-    [SerializeField] private AudioSource attackSoundEffect;
+    //[SerializeField] private AudioSource attackSoundEffect;
 
     // Update is called once per frame
     void Update()
@@ -26,11 +26,16 @@ public class MonsterAttack : MonoBehaviour
             //attackSoundEffect.Play();
 
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+            
             for(int i=0; i<enemiesToDamage.Length; i++){
-                if(enemiesToDamage[i].GetComponent<PlayerAttack>().returnBlock()==true)
+
+                if(enemiesToDamage[i].GetComponent<PlayerAttack>().ReturnBlock()){
                     break;
+                }
+
                 enemiesToDamage[i].GetComponent<Soldier>().TakeDamage(damage);
             }
+
             timeBtwAttack = startTimeBtwAttack;
 
             

@@ -219,7 +219,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 2.85, y: 0.41}
   m_SpriteTilingProperty:
@@ -581,7 +581,7 @@ GameObject:
   - component: {fileID: 30132370}
   m_Layer: 6
   m_Name: AttackPos
-  m_TagString: Untagged
+  m_TagString: Monsters
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1032,25 +1032,49 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1116872534434656612, guid: a107feb0bdde46a4b86e7f7166c1028c, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 1116872534654227602, guid: a107feb0bdde46a4b86e7f7166c1028c, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116872534654227602, guid: a107feb0bdde46a4b86e7f7166c1028c, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
       objectReference: {fileID: 0}
     - target: {fileID: 1116872535428462588, guid: a107feb0bdde46a4b86e7f7166c1028c, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1116872535428462588, guid: a107feb0bdde46a4b86e7f7166c1028c, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 1116872535594905646, guid: a107feb0bdde46a4b86e7f7166c1028c, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116872535594905646, guid: a107feb0bdde46a4b86e7f7166c1028c, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
       objectReference: {fileID: 0}
     - target: {fileID: 1116872535639143797, guid: a107feb0bdde46a4b86e7f7166c1028c, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1116872535639143797, guid: a107feb0bdde46a4b86e7f7166c1028c, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 1116872535684603013, guid: a107feb0bdde46a4b86e7f7166c1028c, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116872535684603013, guid: a107feb0bdde46a4b86e7f7166c1028c, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
       objectReference: {fileID: 0}
     - target: {fileID: 1116872536202529134, guid: a107feb0bdde46a4b86e7f7166c1028c, type: 3}
       propertyPath: m_RootOrder
@@ -1111,6 +1135,10 @@ PrefabInstance:
     - target: {fileID: 1116872536202529135, guid: a107feb0bdde46a4b86e7f7166c1028c, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1116872536202529135, guid: a107feb0bdde46a4b86e7f7166c1028c, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a107feb0bdde46a4b86e7f7166c1028c, type: 3}
@@ -1213,7 +1241,6 @@ MonoBehaviour:
     m_Bits: 128
   monsterAnim: {fileID: 108056623}
   damage: 20
-  attackSoundEffect: {fileID: 0}
 --- !u!1 &128363427
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,7 +1407,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 39
+  m_RootOrder: 37
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &134506487
 GameObject:
@@ -1491,8 +1518,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 146192925}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 127.29779, y: -3.545649, z: 0.100865796}
-  m_LocalScale: {x: 0.5756036, y: 0.43856546, z: 1}
+  m_LocalPosition: {x: 127.29779, y: -3.5975, z: 0.100865796}
+  m_LocalScale: {x: 0.5756036, y: 0.4537837, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 870790460}
@@ -1561,7 +1588,7 @@ GameObject:
   - component: {fileID: 149414069}
   m_Layer: 6
   m_Name: AttackPos
-  m_TagString: Untagged
+  m_TagString: Monsters
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1611,7 +1638,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 45
+  m_RootOrder: 43
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &150514797
 SpriteRenderer:
@@ -1747,7 +1774,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 33
+  m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &152863817
 PrefabInstance:
@@ -1760,13 +1787,25 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7389554513138191583, guid: 20b27d1883adb2247b53f1c3950a6d3c, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 7389554513948195394, guid: 20b27d1883adb2247b53f1c3950a6d3c, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7389554513948195394, guid: 20b27d1883adb2247b53f1c3950a6d3c, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 7389554514102629811, guid: 20b27d1883adb2247b53f1c3950a6d3c, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389554514102629811, guid: 20b27d1883adb2247b53f1c3950a6d3c, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
       objectReference: {fileID: 0}
     - target: {fileID: 7389554514442716960, guid: 20b27d1883adb2247b53f1c3950a6d3c, type: 3}
       propertyPath: m_RootOrder
@@ -1828,13 +1867,25 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7389554514442716967, guid: 20b27d1883adb2247b53f1c3950a6d3c, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 7389554514532604089, guid: 20b27d1883adb2247b53f1c3950a6d3c, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7389554514532604089, guid: 20b27d1883adb2247b53f1c3950a6d3c, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 7389554514542449056, guid: 20b27d1883adb2247b53f1c3950a6d3c, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7389554514542449056, guid: 20b27d1883adb2247b53f1c3950a6d3c, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20b27d1883adb2247b53f1c3950a6d3c, type: 3}
@@ -1942,7 +1993,6 @@ MonoBehaviour:
     m_Bits: 128
   monsterAnim: {fileID: 171481104}
   damage: 20
-  attackSoundEffect: {fileID: 0}
 --- !u!1 &181414184
 GameObject:
   m_ObjectHideFlags: 0
@@ -2499,7 +2549,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 32
+  m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &209606933
 GameObject:
@@ -2751,7 +2801,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 54
+  m_RootOrder: 52
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &236718595
 GameObject:
@@ -3003,7 +3053,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 24
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &281175575
 GameObject:
@@ -3203,7 +3253,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 42
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &287935358
 SpriteRenderer:
@@ -3843,7 +3893,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 52
+  m_RootOrder: 50
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &345521862
 GameObject:
@@ -4313,7 +4363,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 28
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &399397276
 GameObject:
@@ -4481,7 +4531,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 58
+  m_RootOrder: 56
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &487750528
 GameObject:
@@ -4494,7 +4544,7 @@ GameObject:
   - component: {fileID: 487750529}
   m_Layer: 6
   m_Name: AttackPos
-  m_TagString: Untagged
+  m_TagString: Monsters
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4716,7 +4766,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 38
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &527355773
 GameObject:
@@ -4800,7 +4850,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 40
+  m_RootOrder: 38
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &529370149
 GameObject:
@@ -4813,7 +4863,7 @@ GameObject:
   - component: {fileID: 529370150}
   m_Layer: 6
   m_Name: AttackPos
-  m_TagString: Untagged
+  m_TagString: Monsters
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4917,6 +4967,64 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &557287102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 557287103}
+  - component: {fileID: 557287104}
+  m_Layer: 7
+  m_Name: groundPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &557287103
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557287102}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.26, y: -1.27, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2039093136}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &557287104
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557287102}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.22, y: 0.18}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.85, y: 0.26}
+  m_EdgeRadius: 0
 --- !u!1 &571064746
 GameObject:
   m_ObjectHideFlags: 0
@@ -5401,7 +5509,6 @@ MonoBehaviour:
     m_Bits: 128
   monsterAnim: {fileID: 630982323}
   damage: 20
-  attackSoundEffect: {fileID: 0}
 --- !u!95 &630982323 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7023199007760294188, guid: 38d1b8d56cd9d64438e48e07a5870cab, type: 3}
@@ -5489,7 +5596,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 36
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &671341538
 GameObject:
@@ -5502,7 +5609,7 @@ GameObject:
   - component: {fileID: 671341539}
   m_Layer: 6
   m_Name: AttackPos
-  m_TagString: Untagged
+  m_TagString: Monsters
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6056,7 +6163,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 41
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &709671722
 SpriteRenderer:
@@ -6192,7 +6299,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 55
+  m_RootOrder: 53
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &720406008
 GameObject:
@@ -6276,7 +6383,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 23
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &721980529
 GameObject:
@@ -6360,7 +6467,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 51
+  m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &735578683
 GameObject:
@@ -7049,7 +7156,6 @@ MonoBehaviour:
     m_Bits: 128
   monsterAnim: {fileID: 783642207}
   damage: 20
-  attackSoundEffect: {fileID: 0}
 --- !u!1 &785982420
 GameObject:
   m_ObjectHideFlags: 0
@@ -7171,7 +7277,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -7233,7 +7339,6 @@ MonoBehaviour:
     m_Bits: 128
   monsterAnim: {fileID: 799137373}
   damage: 20
-  attackSoundEffect: {fileID: 0}
 --- !u!1 &799823283
 GameObject:
   m_ObjectHideFlags: 0
@@ -7484,7 +7589,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 56
+  m_RootOrder: 54
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &814094101
 GameObject:
@@ -7652,7 +7757,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 22
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &851898807
 GameObject:
@@ -7684,7 +7789,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 47
+  m_RootOrder: 45
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &851898809
 SpriteRenderer:
@@ -7917,9 +8022,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1393340403816649204, guid: 6c686da733391a643b04b11f07639a1c, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 1393340404649882750, guid: 6c686da733391a643b04b11f07639a1c, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393340404649882750, guid: 6c686da733391a643b04b11f07639a1c, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
       objectReference: {fileID: 0}
     - target: {fileID: 1393340404709705832, guid: 6c686da733391a643b04b11f07639a1c, type: 3}
       propertyPath: m_Name
@@ -7928,6 +8041,10 @@ PrefabInstance:
     - target: {fileID: 1393340404709705832, guid: 6c686da733391a643b04b11f07639a1c, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393340404709705832, guid: 6c686da733391a643b04b11f07639a1c, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
       objectReference: {fileID: 0}
     - target: {fileID: 1393340404709705833, guid: 6c686da733391a643b04b11f07639a1c, type: 3}
       propertyPath: m_RootOrder
@@ -7985,13 +8102,25 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1393340405093095178, guid: 6c686da733391a643b04b11f07639a1c, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 1393340405441298585, guid: 6c686da733391a643b04b11f07639a1c, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1393340405441298585, guid: 6c686da733391a643b04b11f07639a1c, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 1393340405664210999, guid: 6c686da733391a643b04b11f07639a1c, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1393340405664210999, guid: 6c686da733391a643b04b11f07639a1c, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c686da733391a643b04b11f07639a1c, type: 3}
@@ -8318,6 +8447,8 @@ Transform:
   - {fileID: 1234125420}
   - {fileID: 1363195195}
   - {fileID: 680445420}
+  - {fileID: 1114975158}
+  - {fileID: 1893253565}
   m_Father: {fileID: 2132509921}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9119,7 +9250,6 @@ MonoBehaviour:
     m_Bits: 128
   monsterAnim: {fileID: 947302171}
   damage: 20
-  attackSoundEffect: {fileID: 0}
 --- !u!1 &960123359
 GameObject:
   m_ObjectHideFlags: 0
@@ -9251,8 +9381,6 @@ Transform:
   - {fileID: 855097570}
   - {fileID: 1745639617}
   - {fileID: 1735526066}
-  - {fileID: 1114975158}
-  - {fileID: 1893253565}
   - {fileID: 1001798025}
   - {fileID: 834971160}
   - {fileID: 720406010}
@@ -9473,7 +9601,7 @@ GameObject:
   - component: {fileID: 991087985}
   m_Layer: 6
   m_Name: AttackPos
-  m_TagString: Untagged
+  m_TagString: Monsters
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9504,9 +9632,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4533046827402072130, guid: 38d1b8d56cd9d64438e48e07a5870cab, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 4533046827863865272, guid: 38d1b8d56cd9d64438e48e07a5870cab, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533046827863865272, guid: 38d1b8d56cd9d64438e48e07a5870cab, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
       objectReference: {fileID: 0}
     - target: {fileID: 4533046827902932076, guid: 38d1b8d56cd9d64438e48e07a5870cab, type: 3}
       propertyPath: m_RootOrder
@@ -9560,13 +9696,25 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4533046827902932077, guid: 38d1b8d56cd9d64438e48e07a5870cab, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 4533046828325292080, guid: 38d1b8d56cd9d64438e48e07a5870cab, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4533046828325292080, guid: 38d1b8d56cd9d64438e48e07a5870cab, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 4533046829193518282, guid: 38d1b8d56cd9d64438e48e07a5870cab, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4533046829193518282, guid: 38d1b8d56cd9d64438e48e07a5870cab, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38d1b8d56cd9d64438e48e07a5870cab, type: 3}
@@ -9652,7 +9800,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 31
+  m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1001261321
 GameObject:
@@ -9768,7 +9916,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 21
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1001798026
 SpriteRenderer:
@@ -10200,7 +10348,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 25
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1015078034
 GameObject:
@@ -10213,7 +10361,7 @@ GameObject:
   - component: {fileID: 1015078035}
   m_Layer: 6
   m_Name: AttackPos
-  m_TagString: Untagged
+  m_TagString: Monsters
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10412,7 +10560,7 @@ GameObject:
   - component: {fileID: 1060849334}
   m_Layer: 6
   m_Name: AttackPos
-  m_TagString: Untagged
+  m_TagString: Monsters
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10863,13 +11011,25 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 2042623224179531877, guid: 39385abaa1419dd49a82630f158c9b93, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 2042623224763555431, guid: 39385abaa1419dd49a82630f158c9b93, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 2042623224763555431, guid: 39385abaa1419dd49a82630f158c9b93, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 2042623224781504174, guid: 39385abaa1419dd49a82630f158c9b93, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042623224781504174, guid: 39385abaa1419dd49a82630f158c9b93, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
       objectReference: {fileID: 0}
     - target: {fileID: 2042623225147202414, guid: 39385abaa1419dd49a82630f158c9b93, type: 3}
       propertyPath: m_RootOrder
@@ -10930,6 +11090,10 @@ PrefabInstance:
     - target: {fileID: 2042623225147202415, guid: 39385abaa1419dd49a82630f158c9b93, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2042623225147202415, guid: 39385abaa1419dd49a82630f158c9b93, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39385abaa1419dd49a82630f158c9b93, type: 3}
@@ -11032,7 +11196,6 @@ MonoBehaviour:
     m_Bits: 128
   monsterAnim: {fileID: 1094027381}
   damage: 20
-  attackSoundEffect: {fileID: 0}
 --- !u!1 &1106224567
 GameObject:
   m_ObjectHideFlags: 0
@@ -11283,7 +11446,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 30
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1108696151
 GameObject:
@@ -11363,8 +11526,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108696151}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 121.4501, y: -3.5580583, z: 0.100865796}
-  m_LocalScale: {x: 0.5756036, y: 0.43856546, z: 1}
+  m_LocalPosition: {x: 121.4501, y: -3.6272, z: 0.100865796}
+  m_LocalScale: {x: 0.5756036, y: 0.45887107, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 870790460}
@@ -11394,7 +11557,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 11.76, y: 6.81}
+  m_Size: {x: 12.01, y: 6.81}
   m_EdgeRadius: 0
 --- !u!1 &1114975157
 GameObject:
@@ -11421,12 +11584,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1114975157}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 133.86, y: -3.43, z: -0.06460618}
+  m_LocalPosition: {x: 134.91711, y: -1.5924134, z: 0}
   m_LocalScale: {x: 0.949077, y: 0.71819997, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 964194080}
-  m_RootOrder: 19
+  m_Father: {fileID: 870790460}
+  m_RootOrder: 127
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1114975159
 SpriteRenderer:
@@ -11510,7 +11673,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 43
+  m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1122784776
 SpriteRenderer:
@@ -11573,10 +11736,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1122787207}
-  - component: {fileID: 1122787208}
   m_Layer: 6
   m_Name: Monsters
-  m_TagString: Untagged
+  m_TagString: Monsters
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11604,102 +11766,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &1122787208
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1122787206}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 12d8f8ad2b62bb8469e02e44075de06a, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1 &1137618417
 GameObject:
   m_ObjectHideFlags: 0
@@ -12712,7 +12778,6 @@ MonoBehaviour:
     m_Bits: 128
   monsterAnim: {fileID: 1273106581}
   damage: 40
-  attackSoundEffect: {fileID: 0}
 --- !u!1 &1276401532
 GameObject:
   m_ObjectHideFlags: 0
@@ -12795,7 +12860,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 37
+  m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1276467888
 GameObject:
@@ -13155,7 +13220,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 27
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1303275313
 GameObject:
@@ -13943,7 +14008,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 44
+  m_RootOrder: 42
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1356800182
 SpriteRenderer:
@@ -14331,7 +14396,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 57
+  m_RootOrder: 55
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1380725017
 GameObject:
@@ -14810,7 +14875,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 46
+  m_RootOrder: 44
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1426302642
 SpriteRenderer:
@@ -14946,7 +15011,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 48
+  m_RootOrder: 46
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1441545065
 GameObject:
@@ -15618,7 +15683,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 50
+  m_RootOrder: 48
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1502955406
 GameObject:
@@ -15715,9 +15780,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5863236370447857029, guid: 416ee64c39cd4ea4bb8dcfb882e5aa04, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 5863236370573225742, guid: 416ee64c39cd4ea4bb8dcfb882e5aa04, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5863236370573225742, guid: 416ee64c39cd4ea4bb8dcfb882e5aa04, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
       objectReference: {fileID: 0}
     - target: {fileID: 5863236371216174422, guid: 416ee64c39cd4ea4bb8dcfb882e5aa04, type: 3}
       propertyPath: m_RootOrder
@@ -15771,6 +15844,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5863236371216174423, guid: 416ee64c39cd4ea4bb8dcfb882e5aa04, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 5863236371954332614, guid: 416ee64c39cd4ea4bb8dcfb882e5aa04, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.02
@@ -15779,13 +15856,25 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5863236371954332615, guid: 416ee64c39cd4ea4bb8dcfb882e5aa04, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 5863236371974982875, guid: 416ee64c39cd4ea4bb8dcfb882e5aa04, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5863236371974982875, guid: 416ee64c39cd4ea4bb8dcfb882e5aa04, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 5863236372063925072, guid: 416ee64c39cd4ea4bb8dcfb882e5aa04, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5863236372063925072, guid: 416ee64c39cd4ea4bb8dcfb882e5aa04, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 416ee64c39cd4ea4bb8dcfb882e5aa04, type: 3}
@@ -17487,7 +17576,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 26
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1779241110
 GameObject:
@@ -17571,7 +17660,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 29
+  m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1781203301
 GameObject:
@@ -18592,9 +18681,9 @@ GameObject:
   - component: {fileID: 1893253565}
   - component: {fileID: 1893253566}
   - component: {fileID: 1893253567}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: platform-block-02
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18607,12 +18696,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1893253564}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 130.4883, y: -3.5000002, z: -0.06460618}
+  m_LocalPosition: {x: 131.54541, y: -1.6624136, z: 0}
   m_LocalScale: {x: 0.89066, y: 0.74402, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 964194080}
-  m_RootOrder: 20
+  m_Father: {fileID: 870790460}
+  m_RootOrder: 128
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1893253566
 SpriteRenderer:
@@ -18774,7 +18863,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 49
+  m_RootOrder: 47
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1914667930
 GameObject:
@@ -18858,7 +18947,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 35
+  m_RootOrder: 33
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1917551637
 GameObject:
@@ -18955,6 +19044,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8363261225355553523, guid: 108c51af55bb592499f571c46a6355f3, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 8363261225706177272, guid: 108c51af55bb592499f571c46a6355f3, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -19015,17 +19108,33 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8363261225706177275, guid: 108c51af55bb592499f571c46a6355f3, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 8363261225771693470, guid: 108c51af55bb592499f571c46a6355f3, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8363261225771693470, guid: 108c51af55bb592499f571c46a6355f3, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
       objectReference: {fileID: 0}
     - target: {fileID: 8363261226010809888, guid: 108c51af55bb592499f571c46a6355f3, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8363261226010809888, guid: 108c51af55bb592499f571c46a6355f3, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 8363261226191527161, guid: 108c51af55bb592499f571c46a6355f3, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8363261226191527161, guid: 108c51af55bb592499f571c46a6355f3, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 108c51af55bb592499f571c46a6355f3, type: 3}
@@ -19111,7 +19220,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 53
+  m_RootOrder: 51
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1944505502
 GameObject:
@@ -19434,7 +19543,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 964194080}
-  m_RootOrder: 34
+  m_RootOrder: 32
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1958853318
 GameObject:
@@ -19962,7 +20071,7 @@ GameObject:
   - component: {fileID: 2039093146}
   m_Layer: 7
   m_Name: Soldier
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20079,6 +20188,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2070788666}
+  - {fileID: 557287103}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -20122,6 +20232,10 @@ MonoBehaviour:
   jumpSoundEffect: {fileID: 2039093141}
   deathSoundEffect: {fileID: 2039093145}
   potionSoundEffect: {fileID: 2039093146}
+  groundCheckCollider: {fileID: 557287103}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!82 &2039093141
 AudioSource:
   m_ObjectHideFlags: 0
@@ -21030,9 +21144,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5600347076567116160, guid: 756dbd0161dcec748b95db3fcb84c48b, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 5600347076804304825, guid: 756dbd0161dcec748b95db3fcb84c48b, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600347076804304825, guid: 756dbd0161dcec748b95db3fcb84c48b, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
       objectReference: {fileID: 0}
     - target: {fileID: 5600347076844282562, guid: 756dbd0161dcec748b95db3fcb84c48b, type: 3}
       propertyPath: m_RootOrder
@@ -21094,13 +21216,25 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5600347076844282563, guid: 756dbd0161dcec748b95db3fcb84c48b, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 5600347077174356550, guid: 756dbd0161dcec748b95db3fcb84c48b, type: 3}
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5600347077174356550, guid: 756dbd0161dcec748b95db3fcb84c48b, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
+      objectReference: {fileID: 0}
     - target: {fileID: 5600347077850302769, guid: 756dbd0161dcec748b95db3fcb84c48b, type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5600347077850302769, guid: 756dbd0161dcec748b95db3fcb84c48b, type: 3}
+      propertyPath: m_TagString
+      value: Monsters
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 756dbd0161dcec748b95db3fcb84c48b, type: 3}

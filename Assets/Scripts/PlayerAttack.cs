@@ -20,8 +20,12 @@ public class PlayerAttack : MonoBehaviour
     private float timeBtwAttack;
     public float startTimeBtwAttack;
 
-    public bool returnBlock(){
+    public bool ReturnBlock(){
         return isBlocking;
+    }
+
+    void Start(){
+        isBlocking=false;
     }
 
 
@@ -49,18 +53,15 @@ public class PlayerAttack : MonoBehaviour
             timeBtwAttack -= Time.deltaTime;
         }
     
-
         if(Input.GetKeyDown(KeyCode.J)){
             playerAnim.SetBool("isBlocking",true);
             blockSoundEffect.Play();
             isBlocking=true;
-            Debug.Log("is blocking");
         }
         if(Input.GetKeyUp(KeyCode.J)){
             playerAnim.SetBool("isBlocking",false);
-            blockSoundEffect.Play();
             isBlocking=false;
-            Debug.Log("is not blocking");
+
         }
         
     }

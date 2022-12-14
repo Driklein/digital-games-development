@@ -14,7 +14,6 @@ public class Soldier : MonoBehaviour
     private int deathTime;
     private int endScreenTime;
 
-    private bool isJumping;
     private bool isWalking;
 
     private int counter;
@@ -25,6 +24,12 @@ public class Soldier : MonoBehaviour
     //[SerializeField] private AudioSource stepsSoundEffect;
     //[SerializeField] private AudioSource horseFoundSoundEffect;
     [SerializeField] private AudioSource potionSoundEffect;
+
+    [SerializeField] Transform groundCheckCollider;
+    const float groundCheckRadius = 0.2f;
+    bool isGrounded = false;
+    [SerializeField] LayerMask groundLayer;
+
 
     public void LifePotion(){
 
@@ -39,7 +44,6 @@ public class Soldier : MonoBehaviour
        
         health -= damage;
         Debug.Log("Soldier Life: "+ health);
-
 
     }
 
@@ -64,7 +68,6 @@ public class Soldier : MonoBehaviour
         animator = GetComponent<Animator>();
         moveSpeed = 5;
 
-        isJumping=false;
 
         health = 100;
         deathTime=200;
@@ -82,7 +85,7 @@ public class Soldier : MonoBehaviour
                 deathSoundEffect.Play();
                 
             if(deathTime==0)
-                //Destroy(gameObject);
+                Destroy(this.gameObject);
             deathTime--;
         }
 
@@ -93,10 +96,9 @@ public class Soldier : MonoBehaviour
             animator.SetBool("isWalking",false);
         
 
-        if(Input.GetKeyDown(KeyCode.UpArrow) && !isJumping && health>0){
+        if((Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W) ) && isGrounded && health>0){
             jumpSoundEffect.Play();
             move.velocity = Vector2.up * 10;
-            isJumping=true;
         }
 
         direction = Input.GetAxis("Horizontal");
@@ -104,20 +106,28 @@ public class Soldier : MonoBehaviour
         if(health>0)  
             move.velocity = new Vector2(direction * moveSpeed, move.velocity.y);
 
-        if(health==0)
-            moveSpeed=0;
-
         if(direction > 0){
             transform.localScale = facingRight;
         }
         if(direction < 0){
             transform.localScale = facingLeft;
         }
+
+        if(health<=0){
+            moveSpeed=0;
+            direction=0;
+        }
     }
 
-    void OnCollisionEnter2D(Collision2D other){
-        if(other.gameObject.CompareTag("Ground")){
-            isJumping=false;
+    void FixedUpdate(){
+        GroundCheck();
+    }
+
+    void GroundCheck(){
+        isGrounded = false;
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheckCollider.position, groundCheckRadius, groundLayer);
+        if(colliders.Length>0){
+            isGrounded = true;
         }
     }
 }
