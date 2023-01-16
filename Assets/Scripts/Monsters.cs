@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Monsters : MonoBehaviour
 {
@@ -14,10 +15,11 @@ public class Monsters : MonoBehaviour
     private bool isMoving;
     private int x_controller;
 
-    public int health;
+    public float health;
+    public Image healthBar;
 
 
-    public void TakeDamage(int damage){
+    public void TakeDamage(float damage){
        
         health -= damage;
         Debug.Log("Monster Damage taken");
@@ -41,9 +43,15 @@ public class Monsters : MonoBehaviour
         
     }
 
+    void UpdateHealth(){
+        healthBar.fillAmount = health/100;
+    }
+
     // Update is called once per frame
     void Update()
     {
+        UpdateHealth();
+
         if(health <= 0){
             Destroy(gameObject);
         }
@@ -69,10 +77,12 @@ public class Monsters : MonoBehaviour
         
         if(direction < 0){
             transform.localScale = facingRight;
+            healthBar.fillOrigin = 0;
         }
         
         if(direction > 0){
             transform.localScale = facingLeft;
+            healthBar.fillOrigin = 1;
         }
 
         if(x_controller > 400 && x_controller <600){
