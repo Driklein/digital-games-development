@@ -18,8 +18,6 @@ public class Monsters : MonoBehaviour
     public float health;
     public Image healthBar;
 
-    public bool Boss;
-    public bool FinalBoss;
 
 
     void UpdateHealth(){
@@ -36,12 +34,8 @@ public class Monsters : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(Boss)
-            health=200;
-        else if(FinalBoss)
-            health=400;
-        else
-            health = 100;
+    
+        health = 100;
 
         facingRight = transform.localScale;
         facingLeft = transform.localScale;
