@@ -18,11 +18,17 @@ public class Monsters : MonoBehaviour
     public float health;
     public Image healthBar;
 
+    public bool Boss;
+    public bool FinalBoss;
+
+
+    void UpdateHealth(){
+        healthBar.fillAmount = health/100;
+    }
 
     public void TakeDamage(float damage){
        
         health -= damage;
-        Debug.Log("Monster Damage taken");
 
     }
 
@@ -30,7 +36,13 @@ public class Monsters : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        health = 100;
+        if(Boss)
+            health=200;
+        else if(FinalBoss)
+            health=400;
+        else
+            health = 100;
+
         facingRight = transform.localScale;
         facingLeft = transform.localScale;
         facingLeft.x = facingLeft.x * (-1);
@@ -41,10 +53,6 @@ public class Monsters : MonoBehaviour
         isMoving=false;
         x_controller = -300;
         
-    }
-
-    void UpdateHealth(){
-        healthBar.fillAmount = health/100;
     }
 
     // Update is called once per frame

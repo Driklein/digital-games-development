@@ -13,11 +13,15 @@ public class Menus : MonoBehaviour
 
     public void StartGame(){
 
-       UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex +1);
+       UnityEngine.SceneManagement.SceneManager.LoadScene("Cutscene");
     }
 
     public void HowToPlay(){
         UnityEngine.SceneManagement.SceneManager.LoadScene("HowToPlayScene");
+    }
+
+    public void TryAgainButton(){
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
     }
 
     public void Back(){

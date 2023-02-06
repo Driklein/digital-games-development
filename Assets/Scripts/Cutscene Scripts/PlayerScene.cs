@@ -21,6 +21,8 @@ public class PlayerScene : MonoBehaviour
     public GameObject D2;
     public GameObject D3;
     public GameObject D4;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -96,7 +98,7 @@ public class PlayerScene : MonoBehaviour
         }
 
         if(i==2250)
-            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
 
         i++;
 

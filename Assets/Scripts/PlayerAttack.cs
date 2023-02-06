@@ -26,6 +26,7 @@ public class PlayerAttack : MonoBehaviour
 
     void Start(){
         isBlocking=false;
+        damage = 20;
     }
 
 

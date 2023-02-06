@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Soldier : MonoBehaviour
 {
@@ -10,7 +11,10 @@ public class Soldier : MonoBehaviour
     private Vector3 facingRight;
     private Vector3 facingLeft;
     public Animator animator;
-    public int health;
+
+    public float health;
+    public Image healthBar;
+
     private int deathTime;
     private int endScreenTime;
 
@@ -20,15 +24,19 @@ public class Soldier : MonoBehaviour
 
     [SerializeField] private AudioSource jumpSoundEffect;
     [SerializeField] private AudioSource deathSoundEffect;
-    //[SerializeField] private AudioSource hurtSoundEffect;
-    //[SerializeField] private AudioSource stepsSoundEffect;
-    //[SerializeField] private AudioSource horseFoundSoundEffect;
     [SerializeField] private AudioSource potionSoundEffect;
+    [SerializeField] private AudioSource playerHurtSoundEffect;
+    [SerializeField] private AudioSource horseFoundSoundEffect;
+
 
     [SerializeField] Transform groundCheckCollider;
     const float groundCheckRadius = 0.2f;
     bool isGrounded = false;
     [SerializeField] LayerMask groundLayer;
+
+    void UpdateHealth(){
+        healthBar.fillAmount = health/100;
+    }
 
 
     public void LifePotion(){
@@ -44,17 +52,22 @@ public class Soldier : MonoBehaviour
        
         health -= damage;
         Debug.Log("Soldier Life: "+ health);
+        playerHurtSoundEffect.Play();
 
     }
 
     public void HorseFound(){
         Debug.Log("Horse Found");
-        //horseFoundSoundEffect.Play();
+        horseFoundSoundEffect.Play();
         if(endScreenTime==0)
-            UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex + 1);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("EndScreen");
         else
             endScreenTime--;
 
+    }
+
+    public void NextPhase(){
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene2");
     }
 
     // Start is called before the first frame update
@@ -71,7 +84,7 @@ public class Soldier : MonoBehaviour
 
         health = 100;
         deathTime=200;
-        endScreenTime= 300;
+        endScreenTime= 200;
         counter = 0;
 
     }
@@ -79,15 +92,23 @@ public class Soldier : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        UpdateHealth();
+        
         if(health <= 0){
             animator.SetBool("isDying",true);
             if(deathTime==100)
                 deathSoundEffect.Play();
                 
-            if(deathTime==0)
+            if(deathTime==0){
                 Destroy(this.gameObject);
+                UnityEngine.SceneManagement.SceneManager.LoadScene("GameOverScreen");
+            }
             deathTime--;
         }
+
+        if(transform.position.y < -7)
+            UnityEngine.SceneManagement.SceneManager.LoadScene("GameOverScreen");
+        
 
         if(Input.GetAxis("Horizontal")!=0 && health>0){
             animator.SetBool("isWalking",true);
@@ -105,18 +126,18 @@ public class Soldier : MonoBehaviour
 
         if(health>0)  
             move.velocity = new Vector2(direction * moveSpeed, move.velocity.y);
+        else
+            moveSpeed=0;
 
         if(direction > 0){
             transform.localScale = facingRight;
+            healthBar.fillOrigin = 0;
         }
         if(direction < 0){
             transform.localScale = facingLeft;
+            healthBar.fillOrigin = 1;
         }
 
-        if(health<=0){
-            moveSpeed=0;
-            direction=0;
-        }
     }
 
     void FixedUpdate(){

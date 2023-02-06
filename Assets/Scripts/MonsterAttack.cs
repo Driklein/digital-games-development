@@ -9,13 +9,19 @@ public class MonsterAttack : MonoBehaviour
     public Transform attackPos;
     public float attackRange;
 
+    
+
     public LayerMask whatIsEnemies;
     public Animator monsterAnim;
     public int damage;
 
-    //[SerializeField] private AudioSource attackSoundEffect;
+    
 
     // Update is called once per frame
+    void Start(){
+        damage = 20;
+    }
+    
     void Update()
     {
 
@@ -23,7 +29,7 @@ public class MonsterAttack : MonoBehaviour
             timeBtwAttack = startTimeBtwAttack;
 
             monsterAnim.SetTrigger("isAttacking");
-            //attackSoundEffect.Play();
+            
 
             Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
             
